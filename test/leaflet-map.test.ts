@@ -1,7 +1,8 @@
-import { assert, expect, fixture } from '@open-wc/testing';
+import { fixture } from '@open-wc/testing';
 import '../leaflet-map.js';
 import { html } from 'lit-html';
 import { LeafletMap } from '../src/LeafletMap.js';
+import { describe, it, expect, assert } from 'vitest';
 
 describe('<leaflet-map>', () => {
   describe('Functionality', () => {

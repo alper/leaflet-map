@@ -1,7 +1,8 @@
-import { css, html, state, LitElement, property } from 'lit-element';
+import { css, html, LitElement, PropertyValues } from 'lit-element';
+import { property } from 'lit-element/decorators/property';
+import { state } from 'lit-element/decorators/state';
 import { Circle, Icon, LeafletEvent, LeafletMouseEvent, Map, Marker } from 'leaflet';
-import { PropertyValues } from 'lit-element/lib/updating-element';
-import debounce from '@queso/debounce';
+import debounce from 'debounce';
 
 // https://github.com/Leaflet/Leaflet/issues/7055
 // https://github.com/Leaflet/Leaflet/pull/7174
@@ -144,8 +145,8 @@ export class LeafletMap extends LitElement {
 
     // Fixes click events on iOS touch devices
     // @see https://github.com/Leaflet/Leaflet/issues/6705#issuecomment-575465329
-    if (this._map.tap) {
-      this._map.tap.disable();
+    if (this._map.tapHold) {
+      this._map.tapHold.disable();
     }
 
     // @see https://github.com/leaflet-extras/leaflet-providers
@@ -225,7 +226,7 @@ export class LeafletMap extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
-    const [debounced] = debounce(() => {
+    const debounced = debounce(() => {
       this._handleResize();
     }, 200);
     this.debouncedResize = debounced;

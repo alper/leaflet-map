@@ -43,16 +43,15 @@
     "test:wtr:watch": "concurrently -k -n tsc,karma 'npm run build:watch' \"wtr 'dist/**/*.test.js' --watch\""
   },
   "dependencies": {
-    "@queso/debounce": "^1.1.0",
-    "leaflet": "^1.7.1",
-    "lit-element": "^2.5.1",
-    "lit-html": "^1.4.1"
+    "debounce": "2.2.0",
+    "leaflet": "1.9.2",
+    "lit-element": "4.1.1",
+    "lit-html": "3.2.1"
   },
   "devDependencies": {
     "@open-wc/demoing-storybook": "^2.4.7",
     "@open-wc/eslint-config": "^4.3.0",
     "@open-wc/testing": "^2.5.33",
-    "@open-wc/testing-karma": "^4.0.9",
     "@types/leaflet": "^1.7.5",
     "@types/node": "16.9.1",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
@@ -62,7 +61,7 @@
     "concurrently": "^6.2.1",
     "deepmerge": "^4.2.2",
     "es-dev-server": "^2.1.0",
-    "eslint": "^7.32.0",
+    "eslint": "9.20.1",
     "eslint-config-prettier": "^8.3.0",
     "husky": "^4.3.0",
     "lint-staged": "^11.1.2",
@@ -70,11 +69,12 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.4.1",
     "prettier-package-json": "^2.6.0",
-    "rimraf": "^3.0.2",
-    "sinon": "^9.2.4",
+    "rimraf": "6.0.1",
+    "sinon": "19.0.2",
     "ts-lit-plugin": "^1.2.1",
     "tslib": "^2.3.1",
-    "typescript": "~4.4.3",
+    "typescript": "5.7.3",
+    "vitest": "^3.0.6",
     "web-component-analyzer": "^1.1.6"
   },
   "keywords": [
@@ -148,5 +148,6 @@
         }
       }
     ]
-  }
+  },
+  "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af"
 }

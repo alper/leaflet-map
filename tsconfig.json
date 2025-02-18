@@ -2,7 +2,11 @@
   "compilerOptions": {
     "target": "es2018",
     "module": "esnext",
-    "lib": ["es2017", "dom", "dom.iterable"],
+    "lib": [
+      "es2017",
+      "dom",
+      "dom.iterable"
+    ],
     "moduleResolution": "node",
     "declaration": true,
     "declarationMap": true,
@@ -29,6 +33,13 @@
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true
   },
-  "include": ["*.ts", "src/**/*.ts", "test/**/*.ts"],
-  "exclude": ["dist/**/*.ts"]
+  "include": [
+    "*.ts",
+    "src/LeafletMap.ts",
+    "test/leaflet-map.test.ts"
+  ],
+  "exclude": [
+    "dist/**/*.ts",
+    "node_modules/**/*"
+  ]
 }
