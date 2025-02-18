@@ -1,8 +1,0 @@
-{
-  "ignore": {
-    "sinon": {
-      "versions": ">10",
-      "reason": "@open-wc/testing depends on sinon < 10"
-    }
-  }
-}

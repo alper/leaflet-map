@@ -1,0 +1,1 @@
+{"version":3,"file":"leaflet-map.d.ts","sourceRoot":"","sources":["../leaflet-map.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAE,MAAM,qBAAqB,CAAC;AAIjD,OAAO,CAAC,MAAM,CAAC;IAEb,UAAU,qBAAqB;QAC7B,aAAa,EAAE,UAAU,CAAC;KAC3B;CACF"}

@@ -1,6 +1,6 @@
 import { css, html, LitElement, PropertyValues } from 'lit-element';
-import { property } from 'lit-element/decorators/property';
-import { state } from 'lit-element/decorators/state';
+import { customElement, property } from 'lit-element/decorators.js';
+import { state } from 'lit-element/decorators.js';
 import { Circle, Icon, LeafletEvent, LeafletMouseEvent, Map, Marker } from 'leaflet';
 import debounce from 'debounce';
 
@@ -32,6 +32,7 @@ export interface MarkerInformation {
  * @cssprop {Length} --leaflet-map-min-height - Min. height of the map element
  * @cssprop {Length} --leaflet-popup-item-spacing - Spacing of title + url items inside marker popup
  */
+@customElement('leaflet-map')
 export class LeafletMap extends LitElement {
   @property({ type: Number })
   latitude = 47.38991;
@@ -119,9 +120,9 @@ export class LeafletMap extends LitElement {
   }
 
   /**
-   * Called after the element’s DOM has been updated the first time, immediately before updated is called.
+   * Called after the element's DOM has been updated the first time, immediately before updated is called.
    *
-   * Implement firstUpdated to perform one-time work after the element’s template has been created.
+   * Implement firstUpdated to perform one-time work after the element's template has been created.
    *
    * @param _changedProperties
    */
