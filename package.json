@@ -29,9 +29,6 @@
     "lint:prettier": "prettier \"**/*.js\" \"**/*.ts\" --check --ignore-path .gitignore",
     "prepublishOnly": "npm run build",
     "start": "npm run clean && concurrently -k -n tsc,es-dev-server 'npm run build:watch' 'es-dev-server --app-index demo/index.html --open'",
-    "storybook": "concurrently -k -n tsc,storybook 'npm run build:watch' start-storybook",
-    "storybook:build": "build-storybook",
-    "storybook:build:start": "es-dev-server --root-dir storybook-static --open",
     "build:bundle": "rollup -c"
   },
   "dependencies": {
@@ -41,8 +38,6 @@
     "lit-html": "3.2.1"
   },
   "devDependencies": {
-    "@open-wc/demoing-storybook": "^2.4.7",
-    "@open-wc/eslint-config": "^4.3.0",
     "@rollup/plugin-commonjs": "^28.0.2",
     "@rollup/plugin-node-resolve": "^16.0.0",
     "@rollup/plugin-typescript": "^12.1.2",
