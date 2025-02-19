@@ -36,7 +36,6 @@
   "include": [
     "*.ts",
     "src/LeafletMap.ts",
-    "test/leaflet-map.test.ts"
   ],
   "exclude": [
     "dist/**/*.ts",
