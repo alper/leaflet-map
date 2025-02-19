@@ -7,12 +7,12 @@ export default {
     input: path.resolve(__dirname, 'src/LeafletMap.ts'), // Adjust the entry point as needed
     output: {
         file: 'dist/leaflet-map.bundle.js',
-        format: 'iife', // Immediately Invoked Function Expression, suitable for <script> tags
+        format: 'iife',
         name: 'LeafletMap',
     },
     plugins: [
-        resolve(), // Helps Rollup find node_modules
-        commonjs(), // Converts CommonJS modules to ES6
-        typescript(), // Transpiles TypeScript
+        resolve(),
+        commonjs(),
+        typescript(),
     ],
 };
