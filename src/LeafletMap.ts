@@ -240,7 +240,6 @@ export class LeafletMap extends LitElement {
   }
 
   render() {
-    // noinspection JSUnresolvedLibraryURL
     return html`<link rel="stylesheet" href="https://unpkg.com/leaflet@${L.version}/dist/leaflet.css" />
       <div class="map"></div>`;
   }
@@ -260,6 +259,7 @@ export class LeafletMap extends LitElement {
   }
 
   _updateMapCenterMarker() {
+    // TODO remove this
     if (!this._hasValidMapData()) {
       return;
     }
@@ -279,6 +279,12 @@ export class LeafletMap extends LitElement {
     if (!this._hasValidMapData()) {
       return;
     }
+
+    this.querySelectorAll('leaflet-marker').forEach(marker => {
+      const markerElement = marker as HTMLElement;
+      console.log(markerElement.title);
+      console.log(markerElement.getAttribute('latitude'));
+    });
 
     // Remove existing markers
     this.mapMarkers.forEach(marker => marker.remove());
